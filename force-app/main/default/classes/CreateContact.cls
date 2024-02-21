@@ -23,7 +23,7 @@ public class CreateContact {
                     for(Integer i=0; i<=contactNumber; i++){
                         Datetime newDate = Datetime.newInstance(account.Start_Date__c.Year(), account.Start_Date__c.Month()+i, account.Start_Date__c.Day());
                         Contact newContact = new Contact(LastName=newDate.format('MMM')+' '+String.valueOf(newDate.year()), AccountId = account.Id);
-                        contactList.add(newContact)
+                        contactList.add(newContact);
                     }
                 }
             }
